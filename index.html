@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Puzzle</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>IMAGE GAME</h1>
+            <div class="input-game">
+                <div class="custom-file-upload">
+                    <input type="file" id="file-upload" />
+                </div>
+                <div class="input-row">
+                    <label for="row">Ligne :</label>
+                    <input type="number" id="row" class="input-size" />
+                    <label for="col">Colonne :</label>
+                    <input type="number" id="col" class="input-size" />
+                </div>
+                <button id="cropbtn">Découper</button>
+                <button id="shufflebtn">Mélanger</button>
+            
+
+            </div>
+            <div class="game">
+                <div class="row-game">
+                    <div class="initial"></div>
+                    <div class="images"></div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>

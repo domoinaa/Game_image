@@ -1,0 +1,31 @@
+InputImage : 
+    - mi-gérer anle upload ana sary
+    - nombre de ligne sy colonne
+    - onClick anle découper sy melanger
+
+CropperImage : 
+    - mi-decoupé anle sary initial
+
+Drawer : 
+    - mi-affiché an'ireo sary decoupé rehetra ary ny onClick anle cellule, 
+    - ao koa le bouton manao rotation
+
+GameController : 
+    - mampifamadika an'ireo sary cliqué
+    - manisa anle coups
+    - miantso ny affichage gagné raha gagné
+
+Images : 
+    - mitazona anle matrice an'ilay jeux
+
+Raha anampy rotation :
+    - Drawer.js avy eo ligne 44
+    - ampio ilay bouton
+    - ataovy otranle sasany reo, ovaina fotsiny le valeur
+    - jereo ao amle Image.js fa ao reo fonctions reo (rotate90Degrees, rotateMinus90Degrees)
+
+Raha anova anle backgroud :
+    - style.css
+    - :root (ligne 7)
+
+Efa nampiako commentaire le style.css de mba mora azo

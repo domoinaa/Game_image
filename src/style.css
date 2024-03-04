@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --c1: #0f6bac;
+    --c2: #258bd6;
+    --c3: #84b7fe;
+    --c4: #c6feff;
+    --c5: #e7e8fb;
+    --c6: #d3d6fd;
+    --c7: #9ea3f3;
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    /* color: #1a1a1a; */
+    /* color: rgba(255, 255, 255, 0.87); */
+    /* background-color: #242424; */
+    background-color: var(--c5);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    place-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #371f76;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+h1:hover {
+    font-size: 3em; /* Ajustez la taille souhaitée lors du survol */
+    color: #6d54ac;
+}
+
+
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* input  */
+.input-game {
+    display: flex;
+    height: 300px;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #371f76;
+    color: white;
+    margin-left: 360px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.input-size {
+    width: 50px;
+    padding: 10px 6px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #371f76;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input-size:hover {
+    background-color: #ffffff; /* Changement de couleur du fond lors du survol */
+    color: #371f76;
+}
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.input-size:hover {
+    animation: textFade 0.3s ease-in-out; /* Ajout d'une animation de fondu au changement de couleur du texte */
+}
+
+
+.input-size:hover {
+    border-color: #646cff;
+}
+.input-size:focus-visible,
+button:focus-visible,
+button:focus {
+    outline: none;
+}
+
+/* image initial */
+.initial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.initial-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    background: var(--c2);
+    padding: 1px;
+}
+
+/* les images découpé */
+.row-game {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 6px;
+    margin-top: 20px;
+    background: var(--c6);
+}
+.cell-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    
+    padding: 1px;
+}
+.cell-image.active {
+    border: 1px solid #371f76;
+}
+
+/* bouton rotation  */
+.rotate-btn {
+    margin-top: 12px;
+    float: right;
+}
+
+/* resutat  */
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    gap: 12px;
+    position: fixed; /* Utilisez 'fixed' pour couvrir tout l'écran */
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(55, 31, 118, 0.8); /* Utilisez une couleur semi-transparente pour l'effet de flou */
+    backdrop-filter: blur(8px); /* Ajout du flou */
+}
+
+.result .winner {
+    background-color: var(--c6);
+    padding: 70px;
+    border-radius: 12px;
+    display: grid;
+    gap: 8px;
+    z-index: 122;
+
+    /* Ajustements pour rendre le message de victoire plus grand et visuellement attrayant */
+    font-size: 2em;
+    color: #371f76;
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: inherit;
+    background-color: var(--c7);
+    color: #fff;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+button:hover {
+    border-color: #4663be;
+    background-color: var(--c6);
+    color: #4663be;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type="file"] {
+    width: 350px;
+    max-width: 100%;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    outline: none; /* Supprime la bordure bleue par défaut sur la mise au point */
+}
+
+input[type="file"]::file-selector-button {
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--c6);
+    cursor: pointer;
+    margin-right: 20px;
+    border: 1px solid transparent;
+    color: #371f76;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Effet de survol */
+input[type="file"]:hover {
+    border-color: #dcd4f0;
+    box-shadow: 0 0 5px rgba(217, 207, 241, 0.3);
+    background-color: white;
+    color: #371f76;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #371f76;
+    color: #ffffff;
+}
+
+
+input[type="file"]::file-selector-button:hover {
+    border-color: #646cff;
+    background-color: #6d54ac;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
